@@ -11,7 +11,9 @@ import java.net.Socket;
 import java.net.SocketTimeoutException;
 
 public class Server {
-
+/*
+    https://blog.csdn.net/yehjordan/article/details/50211453
+*/
     private ServerSocket msock;
 
     public Server(int port) throws IOException {

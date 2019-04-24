@@ -55,6 +55,7 @@ public class ReadState implements HandlerState{
     synchronized void process(TCPHandler h, String str) {
         // do process(decode, logically process, encode)..
         // ..
+        System.out.println("1111");
         h.setState(new WriteState()); // 改變狀態(WORKING->SENDING)
         this.sk.interestOps(SelectionKey.OP_WRITE); // 通過key改變通道註冊的事件
         this.sk.selector().wakeup(); // 使一個阻塞住的selector操作立即返回

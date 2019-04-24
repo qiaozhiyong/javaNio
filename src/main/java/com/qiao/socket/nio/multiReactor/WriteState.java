@@ -37,6 +37,7 @@ public class WriteState implements HandlerState {
 
         h.setState(new ReadState()); // 改變狀態(SENDING->READING)
         sk.interestOps(SelectionKey.OP_READ); // 通過key改變通道註冊的事件
+        System.out.println("222");
         sk.selector().wakeup(); // 使一個阻塞住的selector操作立即返回
     }
 
